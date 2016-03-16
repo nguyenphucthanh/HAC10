@@ -1,0 +1,29 @@
+﻿{
+  "dependencies": {
+    "Cimbalino.Toolkit": "2.1.2",
+    "Cimbalino.Toolkit.Core": "2.1.2",
+    "Microsoft.ApplicationInsights": "2.0.0",
+    "Microsoft.ApplicationInsights.PersistenceChannel": "1.2.3",
+    "Microsoft.ApplicationInsights.WindowsApps": "1.1.1",
+    "Microsoft.Net.Http": "2.2.29",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
+    "Newtonsoft.Json": "8.0.3",
+    "SQLite.Core.UAP": "3.8.11.158",
+    "SQLite.Net-PCL": "3.1.1",
+    "SQLite.Net.Async-PCL": "3.1.1",
+    "SQLite.Net.Core-PCL": "3.1.1",
+    "SQLiteWrapperUWP-PCL": "1.0.0.4",
+    "System.Net.Http": "4.0.0"
+  },
+  "frameworks": {
+    "uap10.0": {}
+  },
+  "runtimes": {
+    "win10-arm": {},
+    "win10-arm-aot": {},
+    "win10-x86": {},
+    "win10-x86-aot": {},
+    "win10-x64": {},
+    "win10-x64-aot": {}
+  }
+}
