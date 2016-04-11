@@ -18,6 +18,8 @@ using Windows.UI.Xaml.Navigation;
 using SQLite.Net;
 using SQLite.Net.Interop;
 using SQLite.Net.Platform.WinRT;
+using HAC10.Models;
+
 namespace HAC10
 {
     /// <summary>

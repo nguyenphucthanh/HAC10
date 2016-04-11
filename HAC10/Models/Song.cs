@@ -131,6 +131,16 @@ namespace HAC10.Models
             {
                 song_isfavorite = value;
                 OnPropertyChanged("IsFavorite");
+                OnPropertyChanged("IsFavoriteIconText");
+            }
+        }
+
+        [Ignore]
+        public string IsFavoriteIconText
+        {
+            get
+            {
+                return IsFavorite > 0 ? "\uE735" : "\uE734";
             }
         }
 

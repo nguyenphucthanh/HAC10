@@ -25,17 +25,31 @@ namespace HAC10
     public sealed partial class PageSong : Page
     {
         public List<SongTbl> ListRecentUpdatedSongs;
-        
+
         public PageSong()
         {
             this.InitializeComponent();
+            LoadRescentSongs();
+        }
 
-            using(var db = App.Connection)
+        public void LoadRescentSongs()
+        {
+            using (var db = App.Connection)
             {
                 ListRecentUpdatedSongs =
                     db.Table<SongTbl>().OrderByDescending(x => x.song_date).Take(20).Skip(0).ToList();
                 this.ListViewRecentSongs.ItemsSource = ListRecentUpdatedSongs;
             }
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            LoadRescentSongs();
+        }
+
+        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

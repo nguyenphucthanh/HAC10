@@ -7,6 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.Resources>
+    </Page.Resources>
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"></RowDefinition>
@@ -14,12 +17,17 @@
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
-            <RadioButton Content="Mới cập nhật" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE72C;" IsChecked="True"></RadioButton>
-            <RadioButton Content="Phổ biến" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE728;"></RadioButton>
+            <RadioButton Content="Mới cập nhật" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE72C;" IsChecked="True" Checked="RadioButton_Checked"></RadioButton>
+            <RadioButton Content="Phổ biến" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE728;" Checked="RadioButton_Checked_1"></RadioButton>
         </StackPanel>
 
         <ListView Grid.Row="1" Name="ListViewRecentSongs" 
                   ItemTemplate="{StaticResource ItemTemplate}">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                </Style>
+            </ListView.ItemContainerStyle>
         </ListView>
     </Grid>
 </Page>
