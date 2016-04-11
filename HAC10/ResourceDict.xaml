@@ -5,9 +5,9 @@
     x:Class="HAC10.ResourceDict">
 
     <!--Main Nav Template-->
-    <SolidColorBrush x:Key="NavButtonPressedBackgroundBrush" Color="White" Opacity="0.3" />
-    <SolidColorBrush x:Key="NavButtonCheckedBackgroundBrush" Color="White" Opacity="0.2" />
-    <SolidColorBrush x:Key="NavButtonHoverBackgroundBrush" Color="White" Opacity="0.1" />
+    <SolidColorBrush x:Key="NavButtonPressedBackgroundBrush" Color="White" Opacity="0.7" />
+    <SolidColorBrush x:Key="NavButtonCheckedBackgroundBrush" Color="White" Opacity="0.5" />
+    <SolidColorBrush x:Key="NavButtonHoverBackgroundBrush" Color="White" Opacity="0.3" />
 
     <Style x:Key="NavRadioButtonStyle" TargetType="RadioButton">
         <Setter Property="Background" Value="Transparent"/>
@@ -79,7 +79,7 @@
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0">
                 <TextBlock Text="{Binding Title}" FontSize="18"></TextBlock>
-                <TextBlock Text="{Binding FirstLyric}"></TextBlock>
+                <TextBlock Text="{Binding FirstLyric}" FontSize="12"></TextBlock>
             </StackPanel>
             <Button Name="btnFav" Click="btnFav_Click" Grid.Column="1" Width="50" Height="50" 
                     Content="{Binding IsFavoriteIconText}" FontFamily="Segoe MDL2 Assets">

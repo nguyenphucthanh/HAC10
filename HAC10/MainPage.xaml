@@ -13,14 +13,14 @@
     <SplitView Name="MainSplitView" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="280" Content="{Binding}">
         <SplitView.Pane>
             <StackPanel>
-                <RadioButton x:Name="BtnOpenMenu" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE700;" Content="Hợp Âm Chuẩn" Click="BtnOpenMenu_Click"/>
-                <RadioButton x:Name="BtnSearch" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE71E;" Content="Tìm kiếm"/>
-                <RadioButton x:Name="BtnSong" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE8D6;" Content="Bài hát" Click="BtnSong_Click"/>
-                <RadioButton x:Name="BtnPlaylist" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE8FD;" Content="Playlist của tôi"/>
-                <RadioButton x:Name="BtnFavorite" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE735;" Content="Bài hát yêu thích"/>
-                <RadioButton x:Name="BtnSearchByChord" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE7C5;" Content="Tìm theo hợp âm"/>
-                <RadioButton x:Name="BtnLookupChord" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE90B;" Content="Tra cứu hợp âm"/>
-                <RadioButton x:Name="BtnSetting" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE713;" Content="Thiết lập"/>
+                <RadioButton GroupName="nav" x:Name="BtnOpenMenu" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE700;" Content="Hợp Âm Chuẩn" Click="BtnOpenMenu_Click" Checked="BtnOpenMenu_Checked"/>
+                <RadioButton GroupName="nav" x:Name="BtnSearch" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE71E;" Content="Tìm kiếm"/>
+                <RadioButton GroupName="nav" x:Name="BtnSong" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE8D6;" Content="Bài hát" Click="BtnSong_Click"/>
+                <RadioButton GroupName="nav" x:Name="BtnPlaylist" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE8FD;" Content="Playlist của tôi"/>
+                <RadioButton GroupName="nav" x:Name="BtnFavorite" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE735;" Content="Bài hát yêu thích"/>
+                <RadioButton GroupName="nav" x:Name="BtnSearchByChord" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE7C5;" Content="Tìm theo hợp âm"/>
+                <RadioButton GroupName="nav" x:Name="BtnLookupChord" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE90B;" Content="Tra cứu hợp âm"/>
+                <RadioButton GroupName="nav" x:Name="BtnSetting" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE713;" Content="Thiết lập"/>
             </StackPanel>
         </SplitView.Pane>
     </SplitView>

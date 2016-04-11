@@ -86,7 +86,7 @@ namespace HAC10.Models
         [Ignore]
         public string FirstLyric
         {
-            get { return song_first_lyric; }
+            get { return song_first_lyric.Replace(System.Environment.NewLine, " ").Replace("\n", " "); }
             set { song_first_lyric = value; OnPropertyChanged("FirstLyric"); }
         }
 
@@ -113,6 +113,9 @@ namespace HAC10.Models
         [Column("song_lastview")]
         public int song_lastview { get; set; }
 
+        /// <summary>
+        /// this field contain datetime data in tick format
+        /// </summary>
         [Ignore]
         public int LastView
         {

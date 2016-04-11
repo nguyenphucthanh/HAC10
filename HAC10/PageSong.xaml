@@ -5,24 +5,47 @@
     xmlns:local="using:HAC10"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Loaded="Page_Loaded">
 
     <Page.Resources>
     </Page.Resources>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Grid_Loaded">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
-            <RadioButton Content="Mới cập nhật" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE72C;" IsChecked="True" Checked="RadioButton_Checked"></RadioButton>
-            <RadioButton Content="Phổ biến" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE728;" Checked="RadioButton_Checked_1"></RadioButton>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10" Grid.Row="0">
+            <ProgressRing x:Name="progressRing" IsActive="True"></ProgressRing>
+            <StackPanel Orientation="Horizontal" Background="{StaticResource AppBarBackgroundThemeBrush}">
+                <RadioButton GroupName="group1" x:Name="ckbRecent" Content="Mới cập nhật" Style="{StaticResource NavRadioButtonStyle}" 
+                         Tag="&#xE72C;" Checked="RadioButton_Checked" 
+                         Padding="0,0,20,0"></RadioButton>
+                <RadioButton GroupName="group1" x:Name="chbPopular" Content="Phổ biến" Style="{StaticResource NavRadioButtonStyle}" 
+                         Tag="&#xE728;" Checked="RadioButton_Checked_1" 
+                         Padding="0,0,20,0"></RadioButton>
+            </StackPanel>
         </StackPanel>
 
-        <ListView Grid.Row="1" Name="ListViewRecentSongs" 
-                  ItemTemplate="{StaticResource ItemTemplate}">
+
+        <ListView Grid.Row="1"  Name="lstRecentSongs" 
+                  Visibility="Visible"
+                  ItemTemplate="{StaticResource ItemTemplate}" 
+                  SelectionMode="None"
+                  Loaded="ListViewRecentSongs_Loaded">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+
+        <ListView Grid.Row="1"  Name="lstPopularSongs" 
+                  Visibility="Visible"
+                  ItemTemplate="{StaticResource ItemTemplate}" 
+                  SelectionMode="None"
+                  Loaded="lstPopularSongs_Loaded">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>

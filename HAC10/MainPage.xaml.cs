@@ -35,6 +35,11 @@ namespace HAC10
 
         private void BtnSong_Click(object sender, RoutedEventArgs e)
         {
+        }
+
+        private void BtnOpenMenu_Checked(object sender, RoutedEventArgs e)
+        {
+
             var frame = this.DataContext as Frame;
             Page page = frame?.Content as Page;
             if (page?.GetType() != typeof(PageSong))
